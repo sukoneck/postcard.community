@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <div class="container">
+        <main>
+            <h1>Hello,</h1>
+            <p>Here's an example.</p>
+            <p>-Daniel</p>
+            <p><small>January 1, 2025</small></p>
+        </main>
+    </div>
+    <script>
+        Promise.all([
+            fetch('/common/head.html').then(r => r.text()),
+            fetch('/common/footer.html').then(r => r.text())
+        ]).then(([headHtml, footerHtml]) => {
+            document.head.innerHTML = headHtml;
+            document.querySelector('footer').innerHTML = footerHtml;
+        });
+    </script>
+</body>
+</html>

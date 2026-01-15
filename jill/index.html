@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <div class="container">
+        <main>
+          <h1>✉️ 🏞️</h1>
+          <h1>Postcards</h1>
+            <div class="links-section">
+                <a href="2025-01-01.html" class="link-box">2025-01-01</a>
+            </div>
+        </main>
+    </div>
+    <script>
+        Promise.all([
+            fetch('/common/head.html').then(r => r.text())
+        ]).then(([headHtml]) => {
+            document.head.innerHTML = headHtml;
+        });
+    </script>
+</body>
+</html>
